@@ -12,7 +12,7 @@
 const gridTraveler = (m, n, memo = {}) => {
     let key = m + "," + n; // Making a key-value pair
     if (key in memo)
-        return memo[key]; // Checking wheather the 'key' is in the 'memo' or not
+        return memo[key]; // Checking whether the 'key' is in the 'memo' or not
     if (m === 1 && n === 1)
         return 1; // If the grid is 1 X 1, there's only 1 step/move
     if (m === 0 || n === 0)

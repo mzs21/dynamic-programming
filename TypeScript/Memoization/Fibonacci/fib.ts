@@ -25,7 +25,7 @@
 // JS/TS object, keys will be arg to fn, value will be the return value
 
 const fib = (n: number, memo: { [key: string]: number } = {}): number => {
-  if (n in memo) return memo[n]; // Checking wheather 'n' is in 'memo' or not
+  if (n in memo) return memo[n]; // Checking whether 'n' is in 'memo' or not
 
   if (n <= 2) return 1; // As the first two numbers of the sequence is 1
 

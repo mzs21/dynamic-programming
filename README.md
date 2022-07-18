@@ -7,4 +7,10 @@
 ## **Memoization**
 
 - **[Fibonacci Sequence](https://github.com/mzs21/dynamic-programming/tree/main/src/Memoization/Fibonacci)**
+
 - **[Grid Traveler](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/GridTraveler)**
+
+- **[Can Sum](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/CanSum)**
+
+- **[How Sum](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/HowSum)**
+

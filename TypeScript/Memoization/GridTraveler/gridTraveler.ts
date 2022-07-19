@@ -11,6 +11,7 @@
 //   return gridTraveler(m - 1, n) + gridTraveler(m, n - 1);
 // };
 
+// --- Brute Force ---
 // Time Complexity O(2^(n+m))
 // Space Complexity O(n+m)
 
@@ -32,6 +33,7 @@ const gridTraveler = (
   return memo[key];
 };
 
+// --- Memoized ---
 // Time Complexity O(n*m)
 // Space Complexity O(n+m)
 

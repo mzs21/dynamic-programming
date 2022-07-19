@@ -23,6 +23,8 @@
 //     return false; // if the above possibilities don't work, we'll return false
 // }
 
+
+// --- Brute Force ---
 // Time Complexity O(n^m)
 // Space Complexity O(m)
 
@@ -53,6 +55,8 @@ const canSum = (
   return false; // if the above possibilities don't work, we'll return false
 };
 
+
+// --- Memoized ---
 // Time Complexity O(n*m)
 // Space Complexity O(m)
 

@@ -15,6 +15,7 @@
 //   }
 //   return null; // As we can't generate any combination
 // };
+// --- Brute Force ---
 // Time Complexity O(n^m * m)
 // Space Complexity O(m)
 const howSum = (targetSum, numbers, memo = {}) => {
@@ -25,7 +26,7 @@ const howSum = (targetSum, numbers, memo = {}) => {
     if (targetSum < 0)
         return null; // The value of the element can't be a negative number, so we'll return null
     for (let num of numbers) {
-        let remainder = targetSum - num;
+        let remainder = targetSum - num; // Branching through the tree
         let remainderResult = howSum(remainder, numbers, memo);
         if (remainderResult !== null) {
             // Meaning it's possible to generate combination
@@ -36,6 +37,7 @@ const howSum = (targetSum, numbers, memo = {}) => {
     memo[targetSum] = null; // As we can't generate any combination, so 'memo' will have a null value
     return null; // As we can't generate any combination
 };
+// --- Memoized ---
 // Time Complexity O(n*m^2)
 // Space Complexity O(m^2)
 console.log(howSum(7, [2, 3])); // [ 3, 2, 2 ]

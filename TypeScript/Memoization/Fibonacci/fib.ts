@@ -9,6 +9,7 @@
 //   return fib(n - 1) + fib(n - 2);
 // };
 
+// --- Brute Force ---
 // Time Complexity O(2^n)
 // Space Complexity O(n)
 
@@ -34,6 +35,7 @@ const fib = (n: number, memo: { [key: string]: number } = {}): number => {
   return memo[n];
 };
 
+// --- Memoized ---
 // Time Complexity O(n)
 // Space Complexity O(n)
 

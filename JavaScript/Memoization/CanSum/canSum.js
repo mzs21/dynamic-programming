@@ -15,6 +15,7 @@
 //     }
 //     return false; // if the above possibilities don't work, we'll return false
 // }
+// --- Brute Force ---
 // Time Complexity O(n^m)
 // Space Complexity O(m)
 const canSum = (targetSum, numbers, memo = {}) => {
@@ -35,6 +36,7 @@ const canSum = (targetSum, numbers, memo = {}) => {
     memo[targetSum] = false; // If the base cases, don't match, then there's nothing to store, so will return false
     return false; // if the above possibilities don't work, we'll return false
 };
+// --- Memoized ---
 // Time Complexity O(n*m)
 // Space Complexity O(m)
 console.log(canSum(7, [2, 3])); // true

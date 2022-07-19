@@ -6,6 +6,7 @@
 //   if (n <= 2) return 1; // As the first two numbers of the sequence is 1.
 //   return fib(n - 1) + fib(n - 2);
 // };
+// --- Brute Force ---
 // Time Complexity O(2^n)
 // Space Complexity O(n)
 // console.log(fib(6)); // 8
@@ -23,6 +24,7 @@ const fib = (n, memo = {}) => {
     memo[n] = fib(n - 1, memo) + fib(n - 2, memo); // Storing the result in the nth place of memo, so that duplication doesn't happen
     return memo[n];
 };
+// --- Memoized ---
 // Time Complexity O(n)
 // Space Complexity O(n)
 console.log(fib(6)); // 8

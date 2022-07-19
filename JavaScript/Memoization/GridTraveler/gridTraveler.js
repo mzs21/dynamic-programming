@@ -7,6 +7,7 @@
 //   if (m === 0 || n === 0) return 0; // If either of the value of the grid is 0, there's no step/move
 //   return gridTraveler(m - 1, n) + gridTraveler(m, n - 1);
 // };
+// --- Brute Force ---
 // Time Complexity O(2^(n+m))
 // Space Complexity O(n+m)
 const gridTraveler = (m, n, memo = {}) => {
@@ -20,6 +21,7 @@ const gridTraveler = (m, n, memo = {}) => {
     memo[key] = gridTraveler(m - 1, n, memo) + gridTraveler(m, n - 1, memo); // Storing the recursive nodes of the tree, to avoid duplication
     return memo[key];
 };
+// --- Memoized ---
 // Time Complexity O(n*m)
 // Space Complexity O(n+m)
 console.log(gridTraveler(1, 1)); // 1

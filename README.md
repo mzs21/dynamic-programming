@@ -17,3 +17,5 @@
 - **[Best Sum](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/BestSum)** -- **Optimization Problem**
 
 - **[Can Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/CanConstruct)** -- **Decision Problem**
+
+- **[All Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/AllConstruct)** -- **Matrix & Combinatoric Problem**

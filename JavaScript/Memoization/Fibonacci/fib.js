@@ -1,6 +1,7 @@
 "use strict";
 // Write a function "fib(n)" that takes in a number as an argument.
 // The function should return the n-th number of the Fibonacci sequence.
+Object.defineProperty(exports, "__esModule", { value: true });
 // Without Memoization
 // const fib = (n: number): number =>  {
 //   if (n <= 2) return 1; // As the first two numbers of the sequence is 1.

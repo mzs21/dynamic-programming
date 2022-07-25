@@ -48,3 +48,5 @@ console.log(fib(8)); // 21
 console.log(fib(50)); // 12586269025
 
 console.log(fib(1476)); // 1.3069892237633987e+308
+
+export {};

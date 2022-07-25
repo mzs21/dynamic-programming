@@ -6,7 +6,7 @@
 
 ## **Memoization**
 
-- **[Fibonacci Sequence](https://github.com/mzs21/dynamic-programming/tree/main/src/Memoization/Fibonacci)** -- **Fibonacci Problem**
+- **[Fibonacci Sequence](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/Fibonacci)** -- **Fibonacci Problem**
 
 - **[Grid Traveler](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Memoization/GridTraveler)** -- **Matrix & Probability Problem**
 
@@ -22,9 +22,9 @@
 
 ## **Tabulation**
 
-- **[Fibonacci Sequence](https://github.com/mzs21/dynamic-programming/tree/main/src/Tabulation/Fibonacci)** -- **Fibonacci Problem**
+- **[Fibonacci Sequence](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/Fibonacci)** -- **Fibonacci Problem**
 
-- **[Grid Traveler](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/GridTraveler)** -- **Matrix & Probability Problem**
+<!-- - **[Grid Traveler](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/GridTraveler)** -- **Matrix & Probability Problem**
 
 - **[Can Sum](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/CanSum)** -- **Decision Problem**
 
@@ -34,4 +34,4 @@
 
 - **[Can Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/CanConstruct)** -- **Decision Problem**
 
-- **[All Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/AllConstruct)** -- **Matrix & Combinatoric Problem**
+- **[All Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/AllConstruct)** -- **Matrix & Combinatoric Problem** -->

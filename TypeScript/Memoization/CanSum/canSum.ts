@@ -6,7 +6,7 @@
 
 // You may assume all input numbers are non-negative.
 
-// const canSum = (targetSum: number, numbers: number[]) => {
+// const canSum = (targetSum: number, numbers: number[]): boolean => {
 //     if(targetSum === 0) return true; // If the base case is 0, return true
 
 //     if(targetSum < 0) return false; // targetSum can't be negative

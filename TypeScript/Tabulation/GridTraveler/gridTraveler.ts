@@ -4,7 +4,7 @@
 
 // Write a function 'gridTraveler(m, n)' that calculates this.
 
-const gridTraveler = (m: number, n: number): number[][] => {
+const gridTraveler = (m: number, n: number): number => {
   let table = Array(m + 1) // columns
     .fill(0)
     .map(() => Array(n + 1).fill(0)); // rows
@@ -37,4 +37,5 @@ console.log(gridTraveler(3, 3)); // 6
 
 console.log(gridTraveler(18, 18)); // 2333606220
 
-export {};
+export { };
+

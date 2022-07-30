@@ -4,7 +4,7 @@
 
 // If there are multiple combinations possible, you may return any single one.
 
-// const howSum = (targetSum: number, numbers: number[]) => {
+// const howSum = (targetSum: number, numbers: number[]): number[] | null => {
 //   if (targetSum === 0) return []; // As there are no elements in the array
 
 //   if (targetSum < 0) return null; // The value of the element can't be a negative number, so we'll return null

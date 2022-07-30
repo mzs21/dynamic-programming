@@ -21,7 +21,7 @@ const howSum = (targetSum: number, numbers: number[]): number[] | null => {
   return table[targetSum];
 };
 
-// Time Complexity O(m^2*n)
+// Time Complexity O(n*m^2)
 // Space Complexity O(m^2)
 
 console.log(howSum(7, [2, 3])); // [ 3, 2, 2 ]

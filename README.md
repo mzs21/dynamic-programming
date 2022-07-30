@@ -30,8 +30,8 @@
 
  - **[How Sum](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/HowSum)** -- **Combinatoric Problem**
 
-<!-- - **[Best Sum](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/BestSum)** -- **Optimization Problem**
+- **[Best Sum](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/BestSum)** -- **Optimization Problem**
 
-- **[Can Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/CanConstruct)** -- **Decision Problem**
+<!-- - **[Can Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/CanConstruct)** -- **Decision Problem**
 
 - **[All Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/AllConstruct)** -- **Matrix & Combinatoric Problem** -->

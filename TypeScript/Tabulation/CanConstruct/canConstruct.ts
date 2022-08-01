@@ -4,66 +4,30 @@
 
 // You may reuse elements of 'wordBank' as many times as needed.
 
-// const canConstruct = (
-//   target: string,
-//   wordBank: string[],
-//   memo: { [key: string]: string } = {}
-// ): boolean => {
-//   if (target in memo) return true; // Checking whether the 'target' is in the 'memo' or not
+const canConstruct = (target: string, wordBank: string[]): boolean => {
+  let table = Array(target.length + 1).fill(false);
 
-//   if (target === "") return true; // If the target string is empty
+  table[0] = true; // Base case
 
-//   for (let word of wordBank) {
-//     if (target.indexOf(word) === 0) {
-//       // Checking whether the 'word' - substring (in other words the prefix) of the wordBank array is in the first index
+  for (let i = 0; i <= target.length; i++) {
+    if (table[i] === true) {
+      // If my current position is true
 
-//       let suffix = target.slice(word.length); // The value will be the string starting after the substring/word/prefix
-//       if (canConstruct(suffix, wordBank, memo) === true) {
-//         // If the recursive call is true
-//         return true; // We can construct the 'target'
-//       }
-//     }
-//   }
+      for (let word of wordBank) {
+        if (target.slice(i, i + word.length) === word) {
+          // If the 'word' matches the characters starting at position 'i'
 
-//   return false;
-// };
-
-// --- Brute Force ---
-// Time Complexity O(n^m * m)
-// Space Complexity O(m^2)
-
-const canConstruct = (
-  target: string,
-  wordBank: string[],
-  memo: { [key: string]: boolean } = {}
-): boolean => {
-  if (target in memo) return memo[target]; // Checking whether the 'target' is in the 'memo' or not
-
-  if (target === "") return true; // If the target string is empty
-
-  for (let word of wordBank) {
-    if (target.indexOf(word) === 0) {
-      // Checking whether the 'word' - substring (in other words the prefix) of the wordBank array is in the first index
-
-      let suffix = target.slice(word.length); // The value will be the string starting after the substring/word/prefix
-      if (canConstruct(suffix, wordBank, memo) === true) {
-        // If the recursive call is true
-
-        memo[target] = true; // We can construct the 'target', so we are storing it in the 'memo' object
-
-        return true;
+          table[i + word.length] = true;
+        }
       }
     }
   }
 
-  memo[target] = false; // We can't construct the 'target'
-
-  return false;
+  return table[target.length];
 };
 
-// --- Memoized ---
 // Time Complexity O(n*m^2)
-// Space Complexity O(m^2)
+// Space Complexity O(m)
 
 console.log(canConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"])); // true
 

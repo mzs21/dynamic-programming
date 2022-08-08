@@ -34,5 +34,7 @@
 
 - **[Can Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/CanConstruct)** -- **Decision Problem**
 
+- **[Count Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/CountConstruct)** -- ****
+
 
 <!-- - **[All Construct](https://github.com/mzs21/dynamic-programming/tree/main/TypeScript/Tabulation/AllConstruct)** -- **Matrix & Combinatoric Problem** -->

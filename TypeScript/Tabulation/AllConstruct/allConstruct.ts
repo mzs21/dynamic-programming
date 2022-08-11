@@ -4,19 +4,22 @@
 
 // You may reuse elements of 'wordBank' as many times as needed.
 
-const allConstruct = (target: string, wordBank: string[]): string[][] => {
-  let table: any[][] = Array(target.length + 1)
-    .fill([])
+const allConstruct = (target: string, wordBank: string[]): string[] => {
+  let table: string[][] = Array(target.length + 1)
+    .fill("")
     .map(() => []);
 
-  table[0] = [[]]; // Base case
+  table[0] = [[]] as never[]; // Base case
 
   for (let i = 0; i < target.length; i++) {
     for (let word of wordBank) {
       if (target.slice(i, i + word.length) === word) {
         // If the 'word' matches the characters starting at position 'i'
 
-        let newCombinations = table[i].map((subArray) => [...subArray, word]);
+        let newCombinations: any[] = table[i].map((subArray) => [
+          ...subArray,
+          word,
+        ]);
         // Will take all the combinations at current position & add the 'word' to each of the combinations
 
         table[i + word.length].push(...newCombinations);

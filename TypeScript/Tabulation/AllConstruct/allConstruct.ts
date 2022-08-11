@@ -4,61 +4,32 @@
 
 // You may reuse elements of 'wordBank' as many times as needed.
 
-// const allConstruct = (target: string, wordBank: string[]): string[][] => {
-//   if (target === "") return [[]]; // If the target string is empty
+const allConstruct = (target: string, wordBank: string[]): string[][] => {
+  let table: any[][] = Array(target.length + 1)
+    .fill([])
+    .map(() => []);
 
-//   let result = [];
+  table[0] = [[]]; // Base case
 
-//   for (let word of wordBank) {
-//     if (target.indexOf(word) === 0) {
-//       // Checking whether the 'word' - substring (in other words the prefix) of the wordBank array is in the first index
+  for (let i = 0; i < target.length; i++) {
+    for (let word of wordBank) {
+      if (target.slice(i, i + word.length) === word) {
+        // If the 'word' matches the characters starting at position 'i'
 
-//       let suffix = target.slice(word.length); // The value will be the string starting after the substring/word/prefix
-//       let suffixWays = allConstruct(suffix, wordBank); // Calling recursively
+        let newCombinations = table[i].map((subArray) => [...subArray, word]);
+        // Will take all the combinations at current position & add the 'word' to each of the combinations
 
-//       let targetWays = suffixWays.map((way) => [word, ...way]); // Adding the edge with the node or in other words adding the 'word' before every sub array.
-
-//       result.push(...targetWays); // Building up the array
-//     }
-//   }
-
-//   return result;
-// };
-
-// --- Brute Force ---
-// Time Complexity O(n^m)
-// Space Complexity O(m)
-
-const allConstruct = (
-  target: string,
-  wordBank: string[],
-  memo: { [key: string]: string[][] } = {}
-): string[][] => {
-  if (target in memo) return memo[target]; // Checking whether the 'target' is in the 'memo' or not
-
-  if (target === "") return [[]]; // If the target string is empty
-
-  let result = [];
-
-  for (let word of wordBank) {
-    if (target.indexOf(word) === 0) {
-      // Checking whether the 'word' - substring (in other words the prefix) of the wordBank array is in the first index
-
-      let suffix = target.slice(word.length); // The value will be the string starting after the substring/word/prefix
-      let suffixWays = allConstruct(suffix, wordBank, memo); // Calling recursively
-
-      let targetWays = suffixWays.map((way) => [word, ...way]); // Adding the edge with the node or in other words adding the 'word' before every sub array.
-
-      result.push(...targetWays); // Building up the array
+        table[i + word.length].push(...newCombinations);
+        // Then will add those newCombinations to the furthur index without overwriting
+      }
     }
   }
-  memo[target] = result; // Storing the result
 
-  return result;
+  return table[target.length];
 };
-// --- Memoized ---
-// Time Complexity O(n*m)
-// Space Complexity O(m)
+
+// Time Complexity ~O(n*m)
+// Space Complexity ~O(n*m)
 
 console.log(allConstruct("purple", ["purp", "p", "ur", "le", "purpl"]));
 
@@ -84,15 +55,7 @@ console.log(
 
 // []
 
-console.log(
-  allConstruct("aaaaaaaaaaaaaaaaaaaaaaaaaaz", [
-    "a",
-    "aa",
-    "aaa",
-    "aaaa",
-    "aaaaa",
-  ])
-);
+console.log(allConstruct("aaaaaaaaaaz", ["a", "aa", "aaa", "aaaa", "aaaaa"]));
 
 // []
 
